@@ -16,11 +16,11 @@ Code of [TVT: Transferable Vision Transformer for Unsupervised Domain Adaptation
 
 An example:
 ```
-python3 main.py --train_batch_size 64 --dataset office-home --name cr \
---source_list data/office-home/Clipart.txt --target_list data/office-home/Real_World.txt \
---test_list data/office-home/Real_World.txt --num_classes 65 \
---model_type ViT-B_16 --pretrained_dir checkpoint/ViT-B_16.npz --num_steps 5000 \
---img_size 256 --beta 0.1 --gamma 0.01
+python3 main.py --train_batch_size 64 --dataset office --name wa \
+--source_list data/office/webcam_list.txt --target_list data/office/amazon_list.txt \
+--test_list data/office/amazon_list.txt --num_classes 31 --model_type ViT-B_16 \
+--pretrained_dir checkpoint/ViT-B_16.npz --num_steps 5000 --img_size 256 \
+--beta 0.1 --gamma 0.01 --use_im --theta 0.1
 ```
 
 
