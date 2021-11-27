@@ -10,7 +10,7 @@ Code of [TVT: Transferable Vision Transformer for Unsupervised Domain Adaptation
 
 - Digit: MNIST, SVHN, USPS
 
-- Object: Office, Office-Home, [VisDA-2017](https://github.com/VisionLearningGroup/taskcv-2017-public/tree/master/classification)
+- Object: [Office-31](https://drive.google.com/file/d/0B4IapRTv9pJ1WGZVd1VDMmhwdlE/view?resourcekey=0-gNMHVtZfRAyO_t2_WrOunA), [Office-Home](https://drive.google.com/file/d/0B81rNlvomiwed0V1YUxQdC1uOTg/view?resourcekey=0-2SNWq0CDAuWOBRRBL7ZZsw), [VisDA-2017](https://github.com/VisionLearningGroup/taskcv-2017-public/tree/master/classification)
 
 ### Training:
 
@@ -33,4 +33,4 @@ Citation:
   year={2021}
 }
 ```
-Code of ViT is largely borrowed from [ViT-pytorch](https://github.com/jeonsworld/ViT-pytorch)
+Our code is largely borrowed from [CDAN](https://github.com/thuml/CDAN) and [ViT-pytorch](https://github.com/jeonsworld/ViT-pytorch)
