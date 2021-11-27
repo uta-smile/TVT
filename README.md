@@ -5,6 +5,9 @@ Code of [TVT: Transferable Vision Transformer for Unsupervised Domain Adaptation
 <img width="400" src="https://github.com/uta-smile/TVT/blob/main/image.png">
 </p>
 
+### Pretrained ViT
+
+- Download [ViT-B_16.npz](https://storage.cloud.google.com/vit_models/imagenet21k/ViT-B_16.npz?_ga=2.49067683.-40935391.1637977007) and put it at `checkpoint/ViT-B_16.npz`
 
 ### Datasets:
 
