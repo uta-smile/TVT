@@ -27,7 +27,7 @@ python3 main.py --train_batch_size 64 --dataset office --name wa \
 ```
 
 
-Citation:
+### Citation:
 ```
 @article{yang2021tvt,
   title={TVT: Transferable Vision Transformer for Unsupervised Domain Adaptation},
