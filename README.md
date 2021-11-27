@@ -17,7 +17,7 @@ Code of [TVT: Transferable Vision Transformer for Unsupervised Domain Adaptation
 
 ### Training:
 
-An example:
+All commands can be found in `script.txt`. An example:
 ```
 python3 main.py --train_batch_size 64 --dataset office --name wa \
 --source_list data/office/webcam_list.txt --target_list data/office/amazon_list.txt \
