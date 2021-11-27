@@ -44,5 +44,4 @@ def adv_local(features, ad_net, is_source=False, weights=None):
     else:
         label = torch.from_numpy(np.array([[[0]*seq_len]*num_heads] * batch_size)).float().cuda()
 
-    #return ad_out, torch.nn.BCELoss()(ad_out, label)
-    return ad_out, torch.tensor(0)
+    return ad_out, torch.nn.BCELoss()(ad_out, label)
