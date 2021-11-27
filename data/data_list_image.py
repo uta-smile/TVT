@@ -14,9 +14,9 @@ def make_dataset(image_list, labels):
       images = [(image_list[i].strip(), labels[i, :]) for i in range(len_)]
     else:
       if len(image_list[0].split()) > 2:
-        images = [(val.split()[0][1:], np.array([int(la) for la in val.split()[1:]])) for val in image_list]
+        images = [(val.split()[0], np.array([int(la) for la in val.split()[1:]])) for val in image_list]
       else:
-        images = [(val.split()[0][1:], int(val.split()[1])) for val in image_list]
+        images = [(val.split()[0], int(val.split()[1])) for val in image_list]
     return images
 
 
