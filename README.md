@@ -10,6 +10,11 @@ Download the following models and put them in `checkpoint/`
 - ViT-B_16 [(ImageNet-21K)](https://storage.cloud.google.com/vit_models/imagenet21k/ViT-B_16.npz?_ga=2.49067683.-40935391.1637977007)
 - ViT-B_16 [(ImageNet)](https://console.cloud.google.com/storage/browser/_details/vit_models/sam/ViT-B_16.npz;tab=live_object)
 
+TVT with ViT-B_16 (ImageNet-21K) performs a little bit better than TVT with ViT-B_16 (ImageNet):
+<p align="left"> 
+<img width="500" src="https://github.com/uta-smile/TVT/blob/main/ImageNet_vs_ImageNet21K.png">
+</p>
+
 ### Datasets:
 
 - Download [data](https://drive.google.com/file/d/1loJn7B0wBLdtkvhHtLpBnkKrJm7REnJI/view?usp=sharing) and replace the current `data/`
