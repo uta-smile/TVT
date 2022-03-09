@@ -153,36 +153,6 @@ def train(args, model):
         writer = SummaryWriter(log_dir=os.path.join("logs", args.dataset, args.name))
 
     args.train_batch_size = args.train_batch_size // args.gradient_accumulation_steps
-
-    # Prepare dataset
-    '''
-    transform_train = transforms.Compose([
-        transforms.RandomResizedCrop((args.img_size, args.img_size), scale=(0.05, 1.0)),
-        transforms.RandomHorizontalFlip(),
-        transforms.ToTensor(),
-        #Normalize(meanfile='./data/ilsvrc_2012_mean.npy'),
-        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-    ])
-    transform_test = transforms.Compose([
-        transforms.Resize((args.img_size, args.img_size)),
-        transforms.ToTensor(),
-        #Normalize(meanfile='./data/ilsvrc_2012_mean.npy'),
-        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-    ])
-    
-    transform_train = transforms.Compose([
-            transforms.Resize((args.img_size+32, args.img_size+32)),
-            transforms.RandomCrop(args.img_size),
-            transforms.RandomHorizontalFlip(),
-            transforms.ToTensor(),
-            Normalize(meanfile='./data/ilsvrc_2012_mean.npy')
-    ])
-    transform_test = transforms.Compose([
-            transforms.Resize((args.img_size, args.img_size)),
-            transforms.ToTensor(),
-            Normalize(meanfile='./data/ilsvrc_2012_mean.npy')
-    ])
-    '''
     transform_train, _, transform_test = get_transform(args.dataset, args.img_size)
 
     train_loader = torch.utils.data.DataLoader(
