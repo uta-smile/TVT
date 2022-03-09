@@ -1,5 +1,10 @@
-# TVT
-Code of [TVT: Transferable Vision Transformer for Unsupervised Domain Adaptation](https://arxiv.org/abs/2108.05988)
+# [TVT: Transferable Vision Transformer for Unsupervised Domain Adaptation](https://arxiv.org/abs/2108.05988)
+
+### updates (03/08/2022)
+Add the source-only code. An example on `Office-31` dataset is as follows, where `dslr` is the source domain, `webcam` is the target domain:
+```
+python3 train.py --train_batch_size 64 --dataset office --name dw_source_only --train_list data/office/dslr_list.txt --test_list data/office/webcam_list.txt --num_classes 31 --model_type ViT-B_16 --pretrained_dir checkpoint/ViT-B_16.npz --num_steps 5000 --img_size 256
+```
 
 <p align="left"> 
 <img width="400" src="https://github.com/uta-smile/TVT/blob/main/image.png">
