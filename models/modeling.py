@@ -103,7 +103,7 @@ class Attention(nn.Module):
             patch = key_layer
             ad_out, loss_ad = lossZoo.adv_local(patch[:,:,1:], ad_net, is_source)
             entropy = - ad_out * torch.log2(ad_out + eps) - (1.0 - ad_out) * torch.log2(1.0 - ad_out + eps)
-            entropy = torch.cat((torch.ones(batch_size, self.num_attention_heads, 1).cuda().float(), entropy), 2)
+            entropy = torch.cat((torch.ones(batch_size, self.num_attention_heads, 1).to(hidden_states.device).float(), entropy), 2)
             trans_ability = entropy if self.vis else None   # [B*12*197]
             entropy = entropy.view(batch_size, self.num_attention_heads, 1, -1)
             attention_probs = torch.cat((attention_probs[:,:,0,:].unsqueeze(2) * entropy, attention_probs[:,:,1:,:]), 2)
