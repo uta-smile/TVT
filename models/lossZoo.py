@@ -29,7 +29,7 @@ def im(outputs_test, gent=True):
 def adv(features, ad_net):
     ad_out = ad_net(features)
     batch_size = ad_out.size(0) // 2
-    dc_target = torch.from_numpy(np.array([[1]] * batch_size + [[0]] * batch_size)).float().cuda()
+    dc_target = torch.from_numpy(np.array([[1]] * batch_size + [[0]] * batch_size)).float().to(features.device)
     return torch.nn.BCELoss()(ad_out, dc_target)
 
 
@@ -40,8 +40,8 @@ def adv_local(features, ad_net, is_source=False, weights=None):
     seq_len = ad_out.size(2)
     
     if is_source:
-        label = torch.from_numpy(np.array([[[1]*seq_len]*num_heads] * batch_size)).float().cuda()
+        label = torch.from_numpy(np.array([[[1]*seq_len]*num_heads] * batch_size)).float().to(features.device)
     else:
-        label = torch.from_numpy(np.array([[[0]*seq_len]*num_heads] * batch_size)).float().cuda()
+        label = torch.from_numpy(np.array([[[0]*seq_len]*num_heads] * batch_size)).float().to(features.device)
 
     return ad_out, torch.nn.BCELoss()(ad_out, label)
