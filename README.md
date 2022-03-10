@@ -1,5 +1,12 @@
 # [TVT: Transferable Vision Transformer for Unsupervised Domain Adaptation](https://arxiv.org/abs/2108.05988)
 
+### updates (03/10/2022)
+Add the attention visualization code. An example is as follows where `att_visual.txt` contains image pathes:
+```
+python3 visualize.py --dataset office --name dw --num_classes 31 --image_path att_visual.txt --img_size 256
+```
+More details can be found in [Attention Map Visualization](https://github.com/uta-smile/TVT/edit/main/README.md#attention-map-visualization)
+
 ### updates (03/08/2022)
 Add the source-only code. An example on `Office-31` dataset is as follows, where `dslr` is the source domain, `webcam` is the target domain:
 ```
@@ -35,6 +42,19 @@ python3 main.py --train_batch_size 64 --dataset office --name wa \
 --test_list data/office/amazon_list.txt --num_classes 31 --model_type ViT-B_16 \
 --pretrained_dir checkpoint/ViT-B_16.npz --num_steps 5000 --img_size 256 \
 --beta 0.1 --gamma 0.01 --use_im --theta 0.1
+```
+
+### Attention Map Visualization:
+```
+python3 visualize.py --dataset office --name wa --num_classes 31 --image_path att_visual.txt --img_size 256
+```
+The code will automatically use the best model in `wa` to visualize the attention maps of images in `att_visual.txt`. `att_visual.txt` contains image pathes you want to visualize, for example:
+```
+/data/office/domain_adaptation_images/dslr/images/calculator/frame_0001.jpg 5
+/data/office/domain_adaptation_images/dslr/images/calculator/frame_0002.jpg 5
+/data/office/domain_adaptation_images/dslr/images/calculator/frame_0003.jpg 5
+/data/office/domain_adaptation_images/dslr/images/calculator/frame_0004.jpg 5
+/data/office/domain_adaptation_images/dslr/images/calculator/frame_0005.jpg 5
 ```
 
 
