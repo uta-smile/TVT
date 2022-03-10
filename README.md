@@ -5,7 +5,7 @@ Add the attention visualization code. An example is as follows where `att_visual
 ```
 python3 visualize.py --dataset office --name dw --num_classes 31 --image_path att_visual.txt --img_size 256
 ```
-More details can be found in [Attention Map Visualization](https://github.com/uta-smile/TVT/edit/main/README.md#attention-map-visualization)
+More details can be found in [Attention Map Visualization](https://github.com/uta-smile/TVT/blob/main/README.md#attention-map-visualization)
 
 ### updates (03/08/2022)
 Add the source-only code. An example on `Office-31` dataset is as follows, where `dslr` is the source domain, `webcam` is the target domain:
