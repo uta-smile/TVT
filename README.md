@@ -1,7 +1,9 @@
 # [TVT: Transferable Vision Transformer for Unsupervised Domain Adaptation](https://arxiv.org/abs/2108.05988)
 
 ### updates (03/10/2022)
-Add the attention visualization code. An example is as follows where `att_visual.txt` contains image pathes:
+1. Add the environment requirements to reproduce the results.
+
+2. Add the attention visualization code. An example is as follows where `att_visual.txt` contains image pathes:
 ```
 python3 visualize.py --dataset office --name dw --num_classes 31 --image_path att_visual.txt --img_size 256
 ```
@@ -16,6 +18,23 @@ python3 train.py --train_batch_size 64 --dataset office --name dw_source_only --
 <p align="left"> 
 <img width="400" src="https://github.com/uta-smile/TVT/blob/main/image.png">
 </p>
+
+### Environment (Python 3.8.12)
+```
+# Install Anaconda (https://docs.anaconda.com/anaconda/install/linux/)
+wget https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh
+bash Anaconda3-2021.11-Linux-x86_64.sh
+
+# Install required packages
+conda install pytorch==1.8.1 torchvision==0.9.1 torchaudio==0.8.1 -c pytorch
+pip install tqdm==4.50.2
+pip install tensorboard==2.8.0
+# apex 0.1
+conda install -c conda-forge nvidia-apex
+pip install scipy==1.5.2
+pip install ml-collections==0.1.0
+pip install scikit-learn==0.23.2
+```
 
 ### Pretrained ViT
 Download the following models and put them in `checkpoint/`
