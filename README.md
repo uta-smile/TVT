@@ -48,7 +48,7 @@ TVT with ViT-B_16 (ImageNet-21K) performs a little bit better than TVT with ViT-
 
 ### Datasets:
 
-- Download [data](https://drive.google.com/file/d/1loJn7B0wBLdtkvhHtLpBnkKrJm7REnJI/view?usp=sharing) and replace the current `data/`
+- Download [data](https://drive.google.com/file/d/1rnU49vEEdtc3EYVo7QydWzxcSuYqZbUB/view?usp=sharing) and replace the current `data/`
 
 - Download images from [Office-31](https://drive.google.com/file/d/0B4IapRTv9pJ1WGZVd1VDMmhwdlE/view?resourcekey=0-gNMHVtZfRAyO_t2_WrOunA), [Office-Home](https://drive.google.com/file/d/0B81rNlvomiwed0V1YUxQdC1uOTg/view?resourcekey=0-2SNWq0CDAuWOBRRBL7ZZsw), [VisDA-2017](https://github.com/VisionLearningGroup/taskcv-2017-public/tree/master/classification) and put them under `data/`. For example, images of `Office-31` should be located at `data/office/domain_adaptation_images/`
 
