@@ -1,4 +1,4 @@
-# [TVT: Transferable Vision Transformer for Unsupervised Domain Adaptation](https://arxiv.org/abs/2108.05988)
+# [TVT: Transferable Vision Transformer for Unsupervised Domain Adaptation](https://arxiv.org/abs/2108.05988), WACV 2023
 
 ### updates (03/10/2022)
 1. Add the environment requirements to reproduce the results.
